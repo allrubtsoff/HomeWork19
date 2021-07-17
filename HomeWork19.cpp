@@ -58,5 +58,7 @@ int main()
     for (Animal* a : animals)
         a->Voice();
 
-    delete[] animals;
+    delete animals[0];
+    delete animals[1];
+    delete animals[2];
 }
