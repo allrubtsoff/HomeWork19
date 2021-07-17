@@ -1,5 +1,6 @@
 ﻿#include <iostream>
 #include <cstdlib>
+#include <string.h>
 
 class Animal
 {
@@ -55,10 +56,9 @@ int main()
 {
     Animal *animals[3] = { new Cat, new Dog, new Pig };
     
-    for (Animal* a : animals)
+    for (Animal *a : animals)
         a->Voice();
 
-    delete animals[0];
-    delete animals[1];
-    delete animals[2];
+    delete[] &animals;
+   
 }
